@@ -10,13 +10,14 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "app.js",
   },
-  devtool: "source-map",
   devServer: {
     static: {
       directory: path.join(__dirname, "static"),
     },
     liveReload: true,
     compress: true,
+    open: true,
+    hot: false,
     port: 3000,
     devMiddleware: {
       index: true,
